@@ -39,4 +39,18 @@ const getJSONPlaceHolder = () =>
         albums: JSON.parse(albums),
         photos: JSON.parse(photos)
       }
+      
+      // MAP Posts to postsDIV 
+      data.posts.map(post => getPosts(post));
+      // MAP Albums to albumsDIV
+      data.albums.map(album => getAlbums(album));
+      // MAP Photos to photosDIV
+      data.photos.map(photo => getPhotos(photo));
+    })
+    // error-handling
+    .catch(err => {
+      console.log(`error is: ${err}`);
     });
+
+// Invoke Three Promises in Parallel
+getJSONPlaceHolder();
