@@ -20,6 +20,39 @@ let postsDIV = document.getElementById('posts'),
   albumsDIV = document.getElementById('albums'),
   photosDIV = document.getElementById('photos');
 
+const getPosts = (post) => {
+  let newPostDIV = document.createElement('div'); 
+
+  newPostDIV.classList.add('post');
+  newPostDIV.innerHTML += `<b>Title: </b>${post.title}
+  
+  Body: ${post.body}
+  `
+  postsDIV.appendChild(newPostDIV); 
+}
+
+const getAlbums = (album) => {
+  let newAlbumDIV = document.createElement('div');
+
+  newAlbumDIV.classList.add('album');
+  newAlbumDIV.innerHTML += `<b>Song Track #</b>: ${album.id}
+  
+  Title: ${album.title}
+  `
+  albumsDIV.appendChild(newAlbumDIV); 
+}
+
+const getPhotos = (photo) => {
+  let newPhotoDIV = document.createElement('div');
+
+  newPhotoDIV.classList.add('photo');
+  newPhotoDIV.innerHTML += `<b>Photo #</b>: ${photo.id}
+  
+  Body: ${photo.title}
+  `
+  photosDIV.appendChild(newPhotoDIV); 
+}
+
 // Function that returns Promise.all operation
 const getJSONPlaceHolder = () =>
   // three promises - posts, albums, photos
