@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper {
+  width: 768px;
+  margin: 0 auto;
+}
+
+.post {
+  margin: 15px auto 15px auto;
+}
+
+.album {
+  margin: 15px auto 15px auto;
+}
+
+.photo {
+  margin: 15px auto 15px auto;
+}
+
+h2 {
+  text-align:center;
+  color: blue;
+  font-weight: bold;
+}
