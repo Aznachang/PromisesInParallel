@@ -21,36 +21,36 @@ let postsDIV = document.getElementById('posts'),
   photosDIV = document.getElementById('photos');
 
 const getPosts = (post) => {
-  let newPostDIV = document.createElement('div'); 
+  let newPostDIV = `
+  <div class='post'>
+    <span><b>Title: </b>${post.title}</span>
+    <span><b>Body: </b>${post.body}</span>    
+  </div>
+  `;
 
-  newPostDIV.classList.add('post');
-  newPostDIV.innerHTML += `<b>Title: </b>${post.title}
-  
-  Body: ${post.body}
-  `
-  postsDIV.appendChild(newPostDIV); 
+  postsDIV.innerHTML += newPostDIV; 
 }
 
 const getAlbums = (album) => {
-  let newAlbumDIV = document.createElement('div');
+  let newAlbumDIV = `
+  <div class='album'>
+    <span><b>Song Track #</b>${album.id}</span>
+    <span><b>Title: </b>${album.title}</span>
+  </div>
+  `;
 
-  newAlbumDIV.classList.add('album');
-  newAlbumDIV.innerHTML += `<b>Song Track #</b>: ${album.id}
-  
-  Title: ${album.title}
-  `
-  albumsDIV.appendChild(newAlbumDIV); 
+  albumsDIV.innerHTML += newAlbumDIV;
 }
 
 const getPhotos = (photo) => {
-  let newPhotoDIV = document.createElement('div');
+  let newPhotoDIV = `
+  <div class='post'>
+    <span><b>Photo #: </b>${photo.id}</span>
+    <span><b>Title: </b>${photo.title}</span>    
+  </div>
+  `;
 
-  newPhotoDIV.classList.add('photo');
-  newPhotoDIV.innerHTML += `<b>Photo #</b>: ${photo.id}
-  
-  Body: ${photo.title}
-  `
-  photosDIV.appendChild(newPhotoDIV); 
+  photosDIV.innerHTML += newPhotoDIV;
 }
 
 // Function that returns Promise.all operation
