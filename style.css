@@ -11,6 +11,16 @@ body {
   margin: 15px auto 15px auto;
 }
 
+.post span {
+  display:block;
+  margin-bottom: 4px;
+}
+
+.post span:last-child {
+  margin-bottom: 10px;
+}
+
+
 .album {
   margin: 15px auto 15px auto;
 }
